@@ -1,0 +1,69 @@
+/* Fuente Bebas Neue desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #581aa4 0%, #250941 100%);
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Nav */
+nav {
+  display: flex;
+  justify-content: space-around;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  flex: 1;
+  text-align: center;
+}
+
+nav a i {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+nav a span {
+  font-size: 20px;
+}
+
+/* Activo */
+nav a.active {
+  background: rgba(0, 0, 0, 0.3);
+  color: #f0f0f0;
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover no activo */
+nav a:not(.active):hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover activo */
+nav a.active:hover {
+  background: rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
