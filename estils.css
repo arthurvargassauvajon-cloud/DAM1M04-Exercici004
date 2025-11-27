@@ -1,27 +1,41 @@
-/* Fuente Bebas Neue desde Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap');
 
-/* Estilos globales */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Bebas Neue", sans-serif;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #e0e0e0; /* gris claro */
+  background: #1c1c1c; /* gris oscuro */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 700;
   letter-spacing: 2px;
+  color: #f5f5f5; /* títulos más claros */
 }
 
-/* Header */
 header {
-  background: linear-gradient(135deg, #581aa4 0%, #250941 100%);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(40, 40, 40, 0.8); /* gris semi-transparente */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(200, 200, 200, 0.2);
 }
 
-/* Nav */
 nav {
   display: flex;
   justify-content: space-around;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -30,40 +44,44 @@ nav a {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: white;
+  color: #e0e0e0; /* gris claro */
   padding: 15px 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   transition: all 0.3s ease;
   flex: 1;
   text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 nav a i {
-  font-size: 24px;
-  margin-bottom: 8px;
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
 nav a span {
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: 700;
 }
 
-/* Activo */
+/* Estado activo */
 nav a.active {
-  background: rgba(0, 0, 0, 0.3);
-  color: #f0f0f0;
+  background: rgba(100, 100, 100, 0.3); /* gris medio */
+  color: #f5f5f5;
   transform: scale(1.05);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 20px rgba(50, 50, 50, 0.5);
 }
 
-/* Hover no activo */
+/* Hover enlaces no activos */
 nav a:not(.active):hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: rgba(150, 150, 150, 0.2); /* gris claro */
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 5px 15px rgba(50, 50, 50, 0.3);
 }
 
-/* Hover activo */
+/* Hover enlace activo */
 nav a.active:hover {
-  background: rgba(0, 0, 0, 0.4);
-  transform: scale(1.05);
+  background: rgba(180, 180, 180, 0.25); /* gris más claro */
+  transform: scale(1.06);
+  box-shadow: 0 6px 25px rgba(50, 50, 50, 0.45);
 }
+
