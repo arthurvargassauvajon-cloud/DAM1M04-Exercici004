@@ -1,15 +1,116 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ca">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Super Page Web</title>
+  <title>Home - Transicions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="estils.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+<body>
 <header>
+  <video autoplay muted loop playsinline class="header-video">
+    <source src="assets/media/video_header.mp4" type="video/mp4">
+  </video>
+  
+  <div class="header-container">
+    <img src="assets/img/logo.png" alt="Logo" class="logo">
     <nav>
-      <a href="index.html">Home</a>
-      <a href="galeria.html">Galeria</a>
-      <a href="guia-estil.html">Guia d'estil</a>
+      <a href="index.html" class="active">
+        <span class="material-symbols-outlined">home</span>
+        <span>Home</span>
+      </a>
+      <a href="galeria.html">
+        <span class="material-symbols-outlined">photo_library</span>
+        <span>Galeria</span>
+      </a>
+      <a href="guia-estil.html">
+        <span class="material-symbols-outlined">palette</span>
+        <span>Guia d'estil</span>
+      </a>
     </nav>
+  </div>
 </header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Transicions CSS</h1>
+    <p class="subtitol">Experimenta amb les diferents funcions de temporització</p>
+    <button class="btn-hero">
+      <span class="material-symbols-outlined">rocket_launch</span>
+      Comença ara
+    </button>
+  </section>
+
+  <!-- Targetes Interactives -->
+  <section class="targetes-section">
+    <h2>Targetes Interactives</h2>
+    <div class="targetes-container">
+      
+      <div class="targeta timing-linear">
+        <div class="targeta-imatge img1"></div>
+        <div class="targeta-contingut">
+          <h3>Linear</h3>
+          <p>Velocitat constant de principi a fi</p>
+          <span class="timing-label">transition-timing-function: linear</span>
+        </div>
+      </div>
+
+      <div class="targeta timing-ease">
+        <div class="targeta-imatge img2"></div>
+        <div class="targeta-contingut">
+          <h3>Ease</h3>
+          <p>Comença lent, accelera i acaba lent</p>
+          <span class="timing-label">transition-timing-function: ease</span>
+        </div>
+      </div>
+
+      <div class="targeta timing-ease-in">
+        <div class="targeta-imatge img3"></div>
+        <div class="targeta-contingut">
+          <h3>Ease-in</h3>
+          <p>Comença lent i accelera gradualment</p>
+          <span class="timing-label">transition-timing-function: ease-in</span>
+        </div>
+      </div>
+
+      <div class="targeta timing-ease-out">
+        <div class="targeta-imatge img4"></div>
+        <div class="targeta-contingut">
+          <h3>Ease-out</h3>
+          <p>Comença ràpid i desaccelera al final</p>
+          <span class="timing-label">transition-timing-function: ease-out</span>
+        </div>
+      </div>
+
+      <div class="targeta timing-ease-in-out">
+        <div class="targeta-imatge img5"></div>
+        <div class="targeta-contingut">
+          <h3>Ease-in-out</h3>
+          <p>Suau al començament i al final</p>
+          <span class="timing-label">transition-timing-function: ease-in-out</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Menú Secundari -->
+  <section class="menu-secundari-section">
+    <h2>Menú Secundari amb Transicions</h2>
+    <nav class="menu-secundari">
+      <a href="#" class="menu-item">Productes</a>
+      <a href="#" class="menu-item">Serveis</a>
+      <a href="#" class="menu-item">Sobre nosaltres</a>
+      <a href="#" class="menu-item">Contacte</a>
+    </nav>
+  </section>
+
+</main>
+
+</body>
+</html>
+

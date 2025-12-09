@@ -1,15 +1,113 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ca">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Super Page Web</title>
+  <title>Galeria - Animacions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="estils.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+<body>
 <header>
+  <video autoplay muted loop playsinline class="header-video">
+    <source src="assets/media/video_header.mp4" type="video/mp4">
+  </video>
+  
+  <div class="header-container">
+    <img src="assets/img/logo.png" alt="Logo" class="logo">
     <nav>
-    <a href="index.html">Home</a>
-    <a href="galeria.html">Galeria</a>
-    <a href="guia-estil.html">Guia d'estil</a>
+      <a href="index.html">
+        <span class="material-symbols-outlined">home</span>
+        <span>Home</span>
+      </a>
+      <a href="galeria.html" class="active">
+        <span class="material-symbols-outlined">photo_library</span>
+        <span>Galeria</span>
+      </a>
+      <a href="guia-estil.html">
+        <span class="material-symbols-outlined">palette</span>
+        <span>Guia d'estil</span>
+      </a>
     </nav>
+  </div>
 </header>
+
+<main>
+  <!-- Loader CSS -->
+  <section class="loader-section">
+    <h2>Loader pur CSS</h2>
+    <p class="descripcio">Animació de rotació infinita amb pulse</p>
+    <div class="loader"></div>
+  </section>
+
+  <!-- Animació Principal -->
+  <section class="animacio-principal">
+    <h2>Animació BounceAndSpin</h2>
+    <p class="descripcio">Combina transform, opacity i canvis de color</p>
+    <div class="bloc-animat">
+      <span class="material-symbols-outlined">stars</span>
+    </div>
+  </section>
+
+  <!-- Scroll Reveal -->
+  <section class="scroll-reveal-section">
+    <h2>Scroll Reveal Animations</h2>
+    <p class="descripcio">Desplaça't per veure les animacions (animation-timeline: view)</p>
+    
+    <div class="reveal-bloc bloc-1">
+      <div class="reveal-imatge img-reveal-1"></div>
+      <div class="reveal-contingut">
+        <span class="material-symbols-outlined">bolt</span>
+        <h3>Bloc 1</h3>
+        <p>Apareix amb fadeIn des de l'esquerra</p>
+      </div>
+    </div>
+
+    <div class="reveal-bloc bloc-2">
+      <div class="reveal-imatge img-reveal-2"></div>
+      <div class="reveal-contingut">
+        <span class="material-symbols-outlined">auto_awesome</span>
+        <h3>Bloc 2</h3>
+        <p>Zoom in amb delay diferent</p>
+      </div>
+    </div>
+
+    <div class="reveal-bloc bloc-3">
+      <div class="reveal-imatge img-reveal-3"></div>
+      <div class="reveal-contingut">
+        <span class="material-symbols-outlined">rocket</span>
+        <h3>Bloc 3</h3>
+        <p>Desplaçament vertical suau</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Repeticions -->
+  <section class="repeticions-section">
+    <h2>Control de Repeticions</h2>
+    
+    <div class="repeticio-container">
+      <div class="repeticio-item">
+        <div class="bloc-alternate">
+          <span class="material-symbols-outlined">sync_alt</span>
+        </div>
+        <h3>Alternate</h3>
+        <p>Anada i tornada contínua</p>
+        <span class="label-code">animation-direction: alternate</span>
+      </div>
+
+      <div class="repeticio-item">
+        <div class="bloc-infinite">
+          <span class="material-symbols-outlined">all_inclusive</span>
+        </div>
+        <h3>Infinite</h3>
+        <p>Rotació sense fi</p>
+        <span class="label-code">animation-iteration-count: infinite</span>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
